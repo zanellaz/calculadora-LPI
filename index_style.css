@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Silkscreen');
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-size: clamp(10pt, 0.8vw, 15pt);
+}
+
+.menu {
+    width:100%;
+    height: 100%;
+    
+}
+
+.menu ul{
+    box-sizing: border-box;
+    width:100%;
+    height: 100%;
+    padding: 2%;
+    background: linear-gradient(140deg, rgb(89, 93, 214) 0%, rgb(148, 84, 211) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.menu ul li {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    list-style: none;
+    margin: 0 3%;
+    padding: 0 1%;
+    width:20%;
+    height: clamp(10vh, 12vmin, 20vh);
+    background-color: #3146c0;
+    margin-bottom:10px;
+    border-radius: 12pt;
+    transition: border-radius .2s, background-color .1s;
+}
+.menu ul li:hover {
+    background-color: #283895;
+    border-radius: 15pt;
+}
+
+.links {
+    border-radius: 12pt;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: Silkscreen;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 720px) {
+    .menu ul{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .menu ul li {
+        -webkit-clip-path: none;
+        clip-path: none;
+        width:80%;
+    }
+}
